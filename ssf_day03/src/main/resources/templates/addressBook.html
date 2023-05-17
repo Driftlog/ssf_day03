@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Fill Information:</h1>
+    <!----- note that it is not /home but just /, th = thymeleaf-->
+    <form data-th-action="@{/contact}" data-th-object="${contact}" method="post">
+        <p>
+            Email:
+            <input type="text" data-th-field="*{email}" />
+        </p>
+        </br>
+
+        <p>
+            Name:
+            <input type="text" data-th-field="*{name}" />
+        </p>
+        </br>
+
+        <p>
+            Phone Number:
+            <input type="text" data-th-field="*{phoneNo}" />
+        </p>
+        </br>
+
+        <p>
+            <input type="submit" value="Save">
+        </p>
+
+    </form>
+</body>
+
+</html>
